@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Exo2.0-Thin';
+  src: local('Exo2.0-Thin'), url(./assets/Exo2.0-Thin.otf) format('opentype');
+}
+
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+h1 {
+  font-family: 'Exo2.0-Thin';
+  height: 44px;
+}
