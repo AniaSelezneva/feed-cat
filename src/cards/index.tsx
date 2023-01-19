@@ -26,16 +26,9 @@ const switchMainColor = (cardRef: any, color: string): void => {
 
 const switchTopTipColor = (cardRef: any, color: string): void => {
   const tip = cardRef.current.getElementsByClassName("top_tip")[0];
-  if (color === "grey") {
+  if (color === Colors.GREY) {
     tip.style.color = `var(--grey-text-color)`;
   } else tip.style.color = `var(--${color}-card-color)`;
-};
-
-const switchBottomTipColor = (cardRef: any, color: string): void => {
-  const tip = cardRef.current.getElementsByClassName("msg_for_empty")[0];
-  if (tip) {
-    tip.style.color = `var(--${color}-text-color)`;
-  }
 };
 
 function Card(props: CardProps) {
@@ -68,7 +61,7 @@ function Card(props: CardProps) {
   };
 
   useEffect(() => {
-    if (isPicked === undefined && !item.quantity) {
+    if (!item.quantity) {
       switchMainColor(cardRef, Colors.GREY);
       setBottomTip(item.message_when_out_of);
     } else if (isPicked) {
