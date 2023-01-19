@@ -8,56 +8,95 @@
     border-radius: 15px;
     background: var(--blue-card-color);
     color: black;
-    height: 85%;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 14%, 16% 0);
+    height: 480px;
+    width: 320px;
+    clip-path: polygon(16% 0, 100% 0, 100% 100%, 0 100%, 0 11%);
     cursor: pointer;
+    font-family: 'trebuchetms';
 }
 
-.empty {
-    filter: grayscale(8%) blur(1.2px);
-    cursor: inherit;
+.overlay {
+    cursor: default;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white-text-color);
+    opacity: 0.6;
+    z-index: 1001;
 }
 
 .msg_for_empty {
-    color: #FFFF66;
+    color: var(--yellow-text-color) !important;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background: #FFFFFF;
     border-radius: 15px;
     height: 100%;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 14%, 16% 0);
+    clip-path: polygon(16% 0, 100% 0, 100% 100%, 0 100%, 0 11%);
     position: relative;
+    overflow: hidden;
+}
+
+.main_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 42px;
+}
+
+.top_tip, .additional_info {
+    color: var(--grey-text-color);
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.additional_info {
+    display: flex;
+    flex-direction: column;
+    line-height: 16px;
+    align-items: flex-start;
 }
 
 .content > img {
-    bottom: -50px;
+    bottom: -55px;
     position: relative;
+    z-index: -10;
+    scale: 1.2;
+    position: relative;
+    z-index: -10;
 }
 
 .main {
     line-height: 1px;
+    margin-top: 19px;
+    margin-left: 51px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .weight {
-    height: 80px;
-    width: 80px;
-    font-size: 22px;
-    color: white;
+    color: #FFFFFF;
     border-radius: 50%;
     background: var(--blue-card-color);
     position: absolute;
     right: 0;
     bottom: 0;
-    margin: 5px;
-    padding: 5px;
+    margin: 16px;
     display: flex;
     justify-content: center;
     gap: 5px;
     flex-direction: column;
+    font-family: 'trebuchetms';
+    font-weight: 400;
+    line-height: 22px;
+    height: 80px;
+    width: 80px;
 }
 
 .weight_num {
@@ -67,16 +106,39 @@
 
 .weight_unit {
     margin: 0;
+    font-size: 21px;
 }
 
 .buy {
     color: var(--blue-card-color);
-    border-bottom: 2px dashed var(--blue-card-color);
+    border-bottom: 1px dashed var(--blue-card-color);
     cursor: pointer;
 }
 
 .buy::after {
     content: '.';
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     color: var(--blue-card-color);
+}
+
+.info {
+    color: var(--grey-card-color);
+    font-size: 13px;
+    line-height: 15.09px;
+    color: #FFFFFF;
+    font-family: 'trebuchetms';
+    margin-top: 14px;
+}
+
+h2, h4 {
+    margin: 0;
+}
+h2 {
+    font-size: 48px;
+    line-height: 55.73px;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 27.87px;
 }

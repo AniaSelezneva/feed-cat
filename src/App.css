@@ -3,21 +3,32 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-@font-face {
-  font-family: 'Exo2.0-Thin';
-  src: local('Exo2.0-Thin'), url(./assets/Exo2.0-Thin.otf) format('opentype');
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .App {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 30px;
+  justify-content: space-around;
+  row-gap: 35px;
 }
 
 h1 {
   font-family: 'Exo2.0-Thin';
-  height: 44px;
+  color: var(--grey-card-color);
+  line-height: 44px;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.additional_info p {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.additional_info p { 
+  margin: 0;
 }
