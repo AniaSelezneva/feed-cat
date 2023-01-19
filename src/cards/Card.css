@@ -46,13 +46,17 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 42px;
+    margin-bottom: 19px;
 }
 
 .top_tip, .additional_info {
     color: var(--grey-text-color);
     margin: 0;
     margin-bottom: 5px;
+}
+
+.top_tip {
+    line-height: 18.58px;
 }
 
 .additional_info {
