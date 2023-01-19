@@ -3,6 +3,7 @@ import messages from "../data_source/messages.json";
 import "./Card.css";
 import { useEffect, useRef, useState } from "react";
 import { Msgs } from "../interface/msgs";
+import kitty from "../assets/kitty.png";
 
 interface CardProps {
   item: FoodItem;
@@ -111,7 +112,7 @@ function Card(props: CardProps) {
             </div>
           </div>
 
-          <img alt="cat" src="./src/assets/kitty.png" />
+          <img alt="cat" src={kitty} />
 
           <div className="weight">
             <p className="weight_num">{item.weight}</p>
